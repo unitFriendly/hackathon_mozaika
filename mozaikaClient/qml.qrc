@@ -1,0 +1,94 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>picture/phone.tif</file>
+        <file>resourses/avtorisation/nadpis`_parol`_ili_login.tif</file>
+        <file>resourses/avtorisation/pole_vvoda_avtorization.tif</file>
+        <file>resourses/avtorisation/vhod_avtorisation.tif</file>
+        <file>psevdoDialog/message.h</file>
+        <file>psevdoDialog/userdialog.h</file>
+        <file>Dialogs.qml</file>
+        <file>resourses/kontacti/chislo_soobsheniy.tif</file>
+        <file>resourses/kontacti/data_v_chate.tif</file>
+        <file>resourses/kontacti/knopka_noviy_dialog.tif</file>
+        <file>resourses/kontacti/lupa.tif</file>
+        <file>resourses/kontacti/plashka.tif</file>
+        <file>resourses/kontacti/treugol`nik.tif</file>
+        <file>resourses/kontacti/uvedomlenie_o_soobshenii.tif</file>
+        <file>resourses/avatar/baba.tif</file>
+        <file>resourses/avatar/cop.tif</file>
+        <file>resourses/avatar/efreitor.tif</file>
+        <file>resourses/avatar/kloun.tif</file>
+        <file>resourses/avatar/lobkov.tif</file>
+        <file>resourses/avatar/tetya_anya.tif</file>
+        <file>ListDialogs.qml</file>
+        <file>NavigationDrawer.qml</file>
+        <file>resourses/shtorka/contakti.tif</file>
+        <file>resourses/shtorka/fon.tif</file>
+        <file>resourses/shtorka/nastroiki.tif</file>
+        <file>resourses/shtorka/plus.tif</file>
+        <file>resourses/shtorka/plusplus.tif</file>
+        <file>resourses/shtorka/zakochek.tif</file>
+        <file>MenuElement.qml</file>
+        <file>HelpMenu.qml</file>
+        <file>UserChat.qml</file>
+        <file>picture/arrow.tif</file>
+        <file>picture/threeLines.tif</file>
+        <file>picture/luppa.tif</file>
+        <file>Massage.qml</file>
+        <file>picture/SendedMessage.tif</file>
+        <file>DownBar.qml</file>
+        <file>resourses/chat/knopka.tif</file>
+        <file>resourses/chat/nazad_strelochka.tif</file>
+        <file>resourses/chat/otpravit`.tif</file>
+        <file>resourses/chat/petel`ka_shtorki.tif</file>
+        <file>resourses/chat/prikrepit`.tif</file>
+        <file>resourses/chat/treugol`nik.tif</file>
+        <file>Contacts.qml</file>
+        <file>ContactsChar.qml</file>
+        <file>Settings.qml</file>
+        <file>resourses/nastroiki/flag_russia.tif</file>
+        <file>resourses/nastroiki/kopka_obovit`_photo.tif</file>
+        <file>resourses/nastroiki/palitra.tif</file>
+        <file>resourses/nastroiki/plashka.tif</file>
+        <file>resourses/nastroiki/plashka_s_imenem.tif</file>
+        <file>HatMask.qml</file>
+        <file>PointUniversalSettings.qml</file>
+        <file>SettingsScrollView.qml</file>
+        <file>resourses/resourses v4/create chat.tif</file>
+        <file>resourses/resourses v4/gruppa.tif</file>
+        <file>resourses/resourses v4/private chat.tif</file>
+        <file>resourses/resourses v4/ri_tochki.tif</file>
+        <file>resourses/create chat_2.tif</file>
+        <file>MediaWidget.qml</file>
+        <file>MediaTextMessage.qml</file>
+        <file>DialogPrivateChat.qml</file>
+        <file>ProfileMember.qml</file>
+        <file>ErrorDialog.qml</file>
+        <file>ConfidenceWidget.qml</file>
+        <file>resourses/kontacti/warning.tif</file>
+        <file>resourses/chat/DontReadedMessage.png</file>
+        <file>resourses/chat/OneGalochka.png</file>
+        <file>resourses/chat/SendedMessage.tif</file>
+        <file>resourses/chat/двеГалочки.png</file>
+        <file>ContactPageMain.qml</file>
+        <file>SupportingWidget.qml</file>
+        <file>AuthorsWidget.qml</file>
+        <file>picture/cyber_mandarin.png</file>
+        <file>RequestPrivatChat.qml</file>
+        <file>PrivateUserChat.qml</file>
+        <file>UniversalMediafileWidget.qml</file>
+        <file>AudioWidget.qml</file>
+        <file>PictureWidget.qml</file>
+        <file>TextWidget.qml</file>
+        <file>picture/PauseAudio.tif</file>
+        <file>picture/StartAudio.tif</file>
+        <file>ToolTipVideo.qml</file>
+        <file>picture/button/pause.png</file>
+        <file>picture/button/play.png</file>
+        <file>picture/button/scale.png</file>
+        <file>Separator.qml</file>
+        <file>picture/download.png</file>
+        <file>picture/phonePrivate.png</file>
+    </qresource>
+</RCC>

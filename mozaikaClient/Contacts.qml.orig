@@ -1,0 +1,249 @@
+import QtQuick 2.12
+import QtQuick.Window 2.12
+import QtQuick.Controls 2.12
+import QtQuick.Layouts 1.12
+import QtGraphicalEffects 1.0
+
+Rectangle {
+    id: addContact
+
+    property int dfltWidth: 506
+    property int dfltHeight: 900
+    property color noColor: "#00000000"
+    property real customOpacity: 0.7
+    property color biruzoviu: "#068d9d"
+
+    property int sizeHeightRectName: 84
+
+    property int fontSize: 14
+    property var tmpContactsChar
+
+    ConfidenceWidget{
+        id: confidence
+        onClicked: {
+            confidence.show()
+        }
+    }
+
+    width: dfltWidth
+    height: dfltHeight
+    color: noColor
+
+
+    function loadContacts(){
+        for(var i = 0; i < columnContact.data.length;i++)
+        {
+            columnContact.data[i].destroy()
+        }
+
+        var countD = clientData.getCountMapContacts();
+
+        var tmp;
+
+        for(var i=0;i<countD;i++){
+            tmp = tmpContactsChar.createObject(columnContact,
+                                            {
+                                                   indexRepeaterChar: i,
+                                                   textRepeaterChar: clientData.getCharMapContacts(i),
+                                                   dfltHeight: clientData.getCountContactsInMap(clientData.getCharMapContacts(i)) * sizeHeightRectName
+//                                                   textRepeaterContactsName: contactsss.getName(i)
+                                            });
+        }
+
+         scrollContacts.contentHeight= clientData.getc * sizeHeightRectName
+    }
+
+    Rectangle{
+        anchors.fill: parent
+        width: parent.width
+        height: parent.height
+        color: "black"
+
+        Image {
+            id: mainPhone
+            anchors.fill: parent
+            source: "qrc:/picture/phone.tif"
+            opacity: customOpacity
+        }
+        Rectangle {
+            id: rectangle
+            x: 0
+            y: 0
+            width: 506
+            height: 60
+            color: "#068d9d"
+
+            Rectangle {
+                id: rectangle1
+                x: 0
+                y: 0
+                width: 117
+                height: 60
+                color: "#00000000"
+
+                Image {
+                    id: image
+                    x: 8
+                    y: 0
+                    width: 40
+                    height: 60
+                    source: "qrc:/resourses/chat/nazad_strelochka.tif"
+                    fillMode: Image.PreserveAspectFit
+                }
+
+                MouseArea{
+                    anchors.fill: parent
+
+                    onClicked: {
+                        loader.sourceComponent = listDialog
+                    }
+                }
+            }
+
+            Rectangle {
+                id: rectangle2
+                x: 195
+                y: 0
+                width: 117
+                height: 60
+                color: "#00000000"
+
+                Text {
+                    id: text2
+                    x: 0
+                    y: 0
+                    width: 117
+                    height: 60
+                    color: "#ffffff"
+                    text: qsTr("Контакты")
+                    font.pixelSize: 20
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+            }
+
+            Rectangle {
+                id: rectangle3
+                x: 389
+                y: 0
+                width: 117
+                height: 60
+                color: "#00000000"
+
+                Image {
+                    id: image1
+                    x: 44
+                    y: 8
+                    width: 65
+                    height: 44
+                    source: "qrc:/picture/luppa.tif"
+                    fillMode: Image.PreserveAspectFit
+                }
+                MouseArea{
+                    anchors.fill: parent
+
+                    onClicked: {
+                        console.log("Здесь будет фильтр")
+                    }
+                }
+            }
+        }
+
+        Rectangle {
+            id: rectangle4
+            x: 0
+            y: 59
+            width: 506
+            height: 841
+            color: "#00000000"
+
+            ScrollView{
+                id: scrollContacts
+                anchors.fill: parent
+                width: parent.width
+                height: parent.height
+                contentWidth: parent.width
+
+
+                clip: true
+
+                Column{
+                    id: columnContact
+                    anchors.fill: parent
+<<<<<<< HEAD
+//                    width: parent.width
+//                    height: parent.height
+
+                    Repeater{
+                        id: repSymbol
+                        anchors.fill: parent
+
+                        model: contactsss.getMapSize()
+
+                        Component.onCompleted: {
+                            console.log("contactsss.getMapSize()", contactsss.getMapSize())
+                        }
+
+                        ContactsChar {
+                            dfltHeight: contactsss.getVectorSize(index) * sizeHeightRectName
+                            indexRepeaterChar: index
+                            textRepeaterChar: contactsss.getSymbol(index)
+//                            textRepeaterContactsName: contactsss.getName(index)
+
+//                            MouseArea{
+//                                anchors.fill: parent
+
+//                                hoverEnabled: true
+
+////                                onClicked: {
+////                                    confidence.show()
+////                                }
+//                            }
+
+
+                            Component.onCompleted: {
+                                console.log("ContactsChar{}textRepeaterContactsName", textRepeaterContactsName)
+                            }
+                        }
+                    }
+=======
+                    width: parent.width
+                    height: parent.height
+                    spacing: 10
+//                    Repeater{
+//                        id: repSymbol
+//                        anchors.fill: parent
+
+//                        model: contactsss.getMapSize()
+
+//                        Component.onCompleted: {
+//                            console.log("contactsss.getMapSize()", contactsss.getMapSize())
+//                        }
+
+//                        ContactsChar {
+//                            dfltHeight: contactsss.getVectorSize(index) * sizeHeightRectName
+//                            indexRepeaterChar: index
+//                            textRepeaterChar: contactsss.getSymbol(index)
+////                            textRepeaterContactsName: contactsss.getName(index)
+
+//                            Component.onCompleted: {
+//                                console.log("ContactsChar{}textRepeaterContactsName", textRepeaterContactsName)
+//                            }
+//                        }
+//                    }
+>>>>>>> refs/remotes/Mozaika/back
+                }
+            }
+        }
+    }
+    Component.onCompleted: {
+        tmpContactsChar = Qt.createComponent("ContactsChar.qml");
+        loadContacts()
+    }
+}
+
+/*##^##
+Designer {
+    D{i:0;formeditorZoom:0.5}
+}
+##^##*/
